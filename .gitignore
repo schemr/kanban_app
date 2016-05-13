@@ -3,6 +3,10 @@ npm-debug.log
 .DS_Store
 dist/
 
+<<<<<<< HEAD
 *.xml
 
 *.iml
+=======
+build/bundle.js
+>>>>>>> origin/master
