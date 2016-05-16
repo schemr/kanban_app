@@ -1,6 +1,7 @@
-import uuid from 'node-uuid';
 import React from 'react';
 import Notes from './Notes.jsx';
+import NoteActions from '../actions/NoteActions';
+import NoteStore from '../stores/NoteStore';
 
 export default class App extends React.Component {
     constructor(props) {

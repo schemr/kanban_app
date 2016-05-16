@@ -24,6 +24,7 @@
     "webpack-merge": "^0.12.0"
   },
   "dependencies": {
+    "alt": "^0.18.4",
     "node-uuid": "^1.4.7",
     "react": "^15.0.2",
     "react-dom": "^15.0.2"
