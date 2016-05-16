@@ -19,7 +19,7 @@ export default class Note extends React.Component {
         return <input type="text" ref={
             element => element ?
             element.selectionStart = this.props.task.length : null
-        } autofocus={true} defaultValue={this.props.task} onBlur={this.finishEdit} onkeypress={this.checkEnter}/>
+        } autofocus={true} defaultValue={this.props.task} onBlur={this.finishEdit} onKeyPress={this.checkEnter}/>
     };
     renderNote = () => {
         const onDelete = this.props.onDelete;

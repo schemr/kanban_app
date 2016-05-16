@@ -1,6 +1,6 @@
 import uuid from 'node-uuid';
-import alt from '../lib/alt';
-import NoteActions from '../actions/NoteActions.js';
+import alt from '../libs/alt';
+import NoteActions from '../actions/NoteActions';
 
 class NoteStore {
     constructor() {
@@ -19,11 +19,11 @@ class NoteStore {
     update(updateNote){
         const notes = this.notes.map(note => {
             if(note.id === updateNote.id){
-                return Object.assingn({}, note, updatedNote);
+                return Object.assign({}, note, updateNote);
             }
             return note;
         });
-    this.setState({notes});
+        this.setState({notes});
     }
     delete(id){
         this.setState({
