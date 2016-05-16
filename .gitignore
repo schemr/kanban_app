@@ -10,3 +10,5 @@ dist/
 =======
 build/bundle.js
 >>>>>>> origin/master
+
+.idea/workspace.xml
