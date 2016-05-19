@@ -16,10 +16,14 @@ export default class Note extends React.Component {
     }
 
     renderEdit = () => {
-        return <input type="text" ref={
-            element => element ?
-            element.selectionStart = this.props.task.length : null
-        } autofocus={true} defaultValue={this.props.task} onBlur={this.finishEdit} onKeyPress={this.checkEnter}/>
+        return <input type="text"
+            ref={
+                (e) => e ? e.selectionStart = this.props.task.length : null
+            }
+            autofocus={true} defaultValue={this.props.task} onBlur={this.finishEdit} onKeyPress={this.checkEnter}/>
+    };
+    renderDelete = () => {
+        return <button className="delete-note" onClick={this.props.onDelete}>x</button>;
     };
     renderNote = () => {
         const onDelete = this.props.onDelete;
@@ -35,9 +39,7 @@ export default class Note extends React.Component {
             editing: true
         });
     };
-    renderDelete = () => {
-        return <button className="delete-note" onClick={this.props.onDelete}>x</button>;
-    };
+
     checkEnter = (e) => {
         if (e.key === 'Enter') {
             this.finishEdit(e);
